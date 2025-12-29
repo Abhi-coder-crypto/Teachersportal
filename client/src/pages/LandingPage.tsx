@@ -28,7 +28,7 @@ export default function LandingPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 lg:py-40 bg-gradient-to-br from-blue-50 via-blue-50 to-indigo-50">
+        <section className="relative overflow-hidden py-16 lg:py-32 bg-gradient-to-br from-blue-50 via-blue-50 to-indigo-50">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-5xl mx-auto text-center space-y-8">
               <motion.div
@@ -105,7 +105,7 @@ export default function LandingPage() {
         </section>
 
         {/* How it Works Section */}
-        <section className="py-24 bg-white">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-semibold text-slate-900 mb-4">
@@ -151,7 +151,7 @@ export default function LandingPage() {
         </section>
 
         {/* Features Grid */}
-        <section className="py-24 bg-slate-50">
+        <section className="py-16 bg-slate-50">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-semibold text-slate-900 mb-4">
@@ -195,7 +195,7 @@ export default function LandingPage() {
         </section>
 
         {/* Stats Section */}
-        <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto text-center">
               <div>
@@ -215,7 +215,7 @@ export default function LandingPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="relative py-32 bg-gradient-to-br from-blue-600 to-blue-700 text-white overflow-hidden">
+        <section className="relative py-24 bg-gradient-to-br from-blue-600 to-blue-700 text-white overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-48 -mt-48" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -ml-48 -mb-48" />
           
@@ -258,7 +258,7 @@ export default function LandingPage() {
         </section>
 
         {/* Quick Features */}
-        <section className="py-24 bg-white">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-semibold text-slate-900 mb-4">
