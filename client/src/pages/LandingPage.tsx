@@ -155,8 +155,13 @@ export default function LandingPage() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 bg-white">
-                <CardContent className="pt-8 pb-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Card className="border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300 bg-white cursor-pointer">
+                  <CardContent className="pt-8 pb-8">
                   <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
                     <BookOpen className="h-6 w-6 text-emerald-600" />
                   </div>
@@ -178,54 +183,67 @@ export default function LandingPage() {
                   </ul>
                 </CardContent>
               </Card>
+              </motion.div>
 
-              <Card className="border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 bg-white">
-                <CardContent className="pt-8 pb-8">
-                  <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                    <Users className="h-6 w-6 text-emerald-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3">Educator Network</h3>
-                  <p className="text-slate-600 text-sm mb-4">Connect with experienced physics teachers globally, share best practices, collaborate on innovative teaching strategies, and build professional relationships</p>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center gap-2 text-slate-700">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                      Discussion forums
-                    </li>
-                    <li className="flex items-center gap-2 text-slate-700">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                      Peer collaboration
-                    </li>
-                    <li className="flex items-center gap-2 text-slate-700">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                      Mentorship programs
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <Card className="border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300 bg-white cursor-pointer">
+                  <CardContent className="pt-8 pb-8">
+                    <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                      <Users className="h-6 w-6 text-emerald-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-slate-900 mb-3">Educator Network</h3>
+                    <p className="text-slate-600 text-sm mb-4">Connect with experienced physics teachers globally, share best practices, collaborate on innovative teaching strategies, and build professional relationships</p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-center gap-2 text-slate-700">
+                        <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                        Discussion forums
+                      </li>
+                      <li className="flex items-center gap-2 text-slate-700">
+                        <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                        Peer collaboration
+                      </li>
+                      <li className="flex items-center gap-2 text-slate-700">
+                        <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                        Mentorship programs
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
 
-              <Card className="border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 bg-white">
-                <CardContent className="pt-8 pb-8">
-                  <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                    <Award className="h-6 w-6 text-emerald-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3">Professional Growth</h3>
-                  <p className="text-slate-600 text-sm mb-4">Workshops, certifications, and training programs designed specifically for continuous skill development and teaching excellence</p>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center gap-2 text-slate-700">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                      Expert webinars
-                    </li>
-                    <li className="flex items-center gap-2 text-slate-700">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                      Certifications
-                    </li>
-                    <li className="flex items-center gap-2 text-slate-700">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                      Teaching workshops
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <Card className="border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300 bg-white cursor-pointer">
+                  <CardContent className="pt-8 pb-8">
+                    <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                      <Award className="h-6 w-6 text-emerald-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-slate-900 mb-3">Professional Growth</h3>
+                    <p className="text-slate-600 text-sm mb-4">Workshops, certifications, and training programs designed specifically for continuous skill development and teaching excellence</p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-center gap-2 text-slate-700">
+                        <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                        Expert webinars
+                      </li>
+                      <li className="flex items-center gap-2 text-slate-700">
+                        <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                        Certifications
+                      </li>
+                      <li className="flex items-center gap-2 text-slate-700">
+                        <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                        Teaching workshops
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -298,7 +316,7 @@ export default function LandingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                 >
-                  <Card className="border border-slate-200 bg-white h-full hover:shadow-md transition-shadow">
+                  <Card className="border border-slate-200 bg-white h-full hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer">
                     <CardContent className="pt-8 pb-8">
                       <div className="flex gap-1 mb-4">
                         {[...Array(testimonial.rating)].map((_, i) => (
@@ -350,6 +368,106 @@ export default function LandingPage() {
                 <p className="text-slate-600">Countries Represented</p>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-24 bg-slate-50">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+              <p className="text-slate-600">Everything you need to know about AIPTA</p>
+            </div>
+
+            <div className="space-y-4">
+              {[
+                {
+                  q: "Is membership free?",
+                  a: "Yes! AIPTA offers free membership with access to all basic resources, discussion forums, and community features. Premium features are also available."
+                },
+                {
+                  q: "How do I access the resource library?",
+                  a: "After signing up and creating your account, you can browse and download all available resources directly from your dashboard."
+                },
+                {
+                  q: "Can I share resources with other educators?",
+                  a: "Absolutely! You can upload your own resources, share them with the community, and earn recognition for your contributions."
+                },
+                {
+                  q: "How often are new resources added?",
+                  a: "Our team and community members continuously add new resources. You can expect fresh content every week."
+                }
+              ].map((faq, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: i * 0.05 }}
+                  className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-md hover:border-emerald-200 transition-all duration-300"
+                >
+                  <h3 className="font-semibold text-slate-900 mb-2 text-lg">{faq.q}</h3>
+                  <p className="text-slate-600">{faq.a}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Impact Section */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">Our Impact</h2>
+              <p className="text-slate-600 text-lg">Making a real difference in physics education</p>
+            </div>
+
+            <div className="grid md:grid-cols-4 gap-6">
+              {[
+                { stat: "50K+", label: "Students Impacted", icon: "👥" },
+                { stat: "2000+", label: "Active Educators", icon: "🎓" },
+                { stat: "500+", label: "Resources Created", icon: "📚" },
+                { stat: "95%", label: "Satisfaction Rate", icon: "⭐" }
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="text-center p-8 bg-gradient-to-br from-emerald-50 to-green-50 rounded-lg border border-emerald-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                >
+                  <div className="text-4xl mb-3">{item.icon}</div>
+                  <p className="text-4xl font-bold text-emerald-600 mb-2">{item.stat}</p>
+                  <p className="text-slate-600">{item.label}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Newsletter Section */}
+        <section className="py-24 bg-gradient-to-r from-emerald-50 to-teal-50">
+          <div className="container mx-auto px-4 max-w-2xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-center"
+            >
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">Stay Updated</h2>
+              <p className="text-slate-600 mb-8">Subscribe to our newsletter for teaching tips, new resources, and community updates</p>
+              
+              <div className="flex gap-2 mb-4">
+                <input 
+                  type="email" 
+                  placeholder="Enter your email" 
+                  className="flex-1 px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300"
+                />
+                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8">
+                  Subscribe
+                </Button>
+              </div>
+              <p className="text-sm text-slate-500">We respect your privacy. Unsubscribe at any time.</p>
+            </motion.div>
           </div>
         </section>
 
