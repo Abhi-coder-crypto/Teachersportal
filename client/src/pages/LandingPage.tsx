@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { BookOpen, ChevronRight, Users, Award, Globe, TrendingUp } from "lucide-react";
+import { BookOpen, ChevronRight, Users, Award, Globe, TrendingUp, Star, CheckCircle2, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function LandingPage() {
@@ -26,7 +26,7 @@ export default function LandingPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 bg-gradient-to-br from-slate-50 via-white to-emerald-50">
+        <section className="relative overflow-hidden py-24 bg-gradient-to-br from-slate-50 via-white to-emerald-50">
           <div className="container mx-auto px-4 max-w-6xl relative z-10">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
@@ -36,7 +36,7 @@ export default function LandingPage() {
                   transition={{ duration: 0.5 }}
                 >
                   <p className="text-emerald-700 font-medium text-sm uppercase tracking-wide">Educator Network</p>
-                  <h1 className="text-5xl font-bold leading-tight mt-4 text-slate-900">
+                  <h1 className="text-5xl lg:text-6xl font-bold leading-tight mt-4 text-slate-900">
                     Transform Physics Education Across India
                   </h1>
                 </motion.div>
@@ -47,14 +47,14 @@ export default function LandingPage() {
                   transition={{ duration: 0.5, delay: 0.1 }}
                   className="text-slate-600 text-lg leading-relaxed"
                 >
-                  Join a network of 2000+ physics educators. Access premium resources, share best practices, and develop your teaching excellence with peer collaboration.
+                  Join a thriving network of 2000+ physics educators. Access premium resources, collaborate with peers worldwide, and transform your teaching methodology through proven strategies.
                 </motion.p>
 
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="flex gap-4 pt-4"
+                  className="flex gap-4 pt-2"
                 >
                   <Link href="/auth">
                     <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold">
@@ -65,6 +65,24 @@ export default function LandingPage() {
                   <Button size="lg" variant="outline" className="border-slate-300 text-slate-900 hover:bg-slate-100">
                     Learn More
                   </Button>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="flex gap-6 pt-4"
+                >
+                  <div className="flex items-center gap-2">
+                    <div className="flex -space-x-2">
+                      {[1, 2, 3].map(i => (
+                        <div key={i} className="w-8 h-8 rounded-full bg-emerald-200 border-2 border-white flex items-center justify-center text-xs font-semibold text-emerald-700">
+                          {i}
+                        </div>
+                      ))}
+                    </div>
+                    <span className="text-sm text-slate-600">Trusted by thousands</span>
+                  </div>
                 </motion.div>
               </div>
 
@@ -102,50 +120,95 @@ export default function LandingPage() {
                       <p className="text-slate-600 text-sm">Curated Resources</p>
                     </div>
                   </div>
+                  <div className="pt-4 border-t border-slate-200">
+                    <p className="text-xs text-slate-500">✓ Free access to premium materials</p>
+                  </div>
                 </div>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 bg-white">
+        {/* Key Features Section */}
+        <section className="py-24 bg-slate-50">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-slate-900 mb-4">
-                Why Educators Choose AIPTA
+                Comprehensive Platform for Physics Education
               </h2>
-              <p className="text-slate-600 text-lg">Comprehensive tools to elevate your teaching practice</p>
+              <p className="text-slate-600 text-lg">Everything you need to excel in the classroom</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="border border-slate-200 shadow-sm hover:shadow-md transition-shadow bg-white">
+              <Card className="border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 bg-white">
                 <CardContent className="pt-8 pb-8">
                   <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
                     <BookOpen className="h-6 w-6 text-emerald-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-2">Premium Resources</h3>
-                  <p className="text-slate-600 text-sm">500+ expertly curated teaching materials, question papers, and assessment tools</p>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3">Premium Resources</h3>
+                  <p className="text-slate-600 text-sm mb-4">500+ expertly curated teaching materials including question papers, worksheets, and assessment tools designed by experienced educators</p>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center gap-2 text-slate-700">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                      Study materials & PDFs
+                    </li>
+                    <li className="flex items-center gap-2 text-slate-700">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                      Board exam papers
+                    </li>
+                    <li className="flex items-center gap-2 text-slate-700">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                      Model answers
+                    </li>
+                  </ul>
                 </CardContent>
               </Card>
 
-              <Card className="border border-slate-200 shadow-sm hover:shadow-md transition-shadow bg-white">
+              <Card className="border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 bg-white">
                 <CardContent className="pt-8 pb-8">
                   <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
                     <Users className="h-6 w-6 text-emerald-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-2">Educator Network</h3>
-                  <p className="text-slate-600 text-sm">Connect with experienced physics teachers, share strategies, and collaborate on innovative approaches</p>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3">Educator Network</h3>
+                  <p className="text-slate-600 text-sm mb-4">Connect with experienced physics teachers globally, share best practices, collaborate on innovative teaching strategies, and build professional relationships</p>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center gap-2 text-slate-700">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                      Discussion forums
+                    </li>
+                    <li className="flex items-center gap-2 text-slate-700">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                      Peer collaboration
+                    </li>
+                    <li className="flex items-center gap-2 text-slate-700">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                      Mentorship programs
+                    </li>
+                  </ul>
                 </CardContent>
               </Card>
 
-              <Card className="border border-slate-200 shadow-sm hover:shadow-md transition-shadow bg-white">
+              <Card className="border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 bg-white">
                 <CardContent className="pt-8 pb-8">
                   <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
                     <Award className="h-6 w-6 text-emerald-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-2">Professional Growth</h3>
-                  <p className="text-slate-600 text-sm">Workshops, certifications, and training programs designed for continuous skill development</p>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3">Professional Growth</h3>
+                  <p className="text-slate-600 text-sm mb-4">Workshops, certifications, and training programs designed specifically for continuous skill development and teaching excellence</p>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center gap-2 text-slate-700">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                      Expert webinars
+                    </li>
+                    <li className="flex items-center gap-2 text-slate-700">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                      Certifications
+                    </li>
+                    <li className="flex items-center gap-2 text-slate-700">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                      Teaching workshops
+                    </li>
+                  </ul>
                 </CardContent>
               </Card>
             </div>
@@ -153,63 +216,141 @@ export default function LandingPage() {
         </section>
 
         {/* How It Works */}
-        <section className="py-20 bg-slate-50">
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-slate-900 mb-4">Getting Started Is Simple</h2>
+              <p className="text-slate-600">Four easy steps to join the community</p>
             </div>
 
             <div className="grid md:grid-cols-4 gap-6">
               {[
-                { num: "1", title: "Sign Up", desc: "Create your educator account" },
-                { num: "2", title: "Explore", desc: "Browse our resource library" },
-                { num: "3", title: "Connect", desc: "Join the educator community" },
-                { num: "4", title: "Grow", desc: "Advance your teaching practice" }
+                { num: "1", title: "Sign Up", desc: "Create your educator account in minutes with email verification" },
+                { num: "2", title: "Explore", desc: "Browse our comprehensive resource library by class and topic" },
+                { num: "3", title: "Connect", desc: "Join discussion forums and find like-minded educators" },
+                { num: "4", title: "Grow", desc: "Access workshops and advance your teaching practice" }
               ].map((step, i) => (
-                <div key={i} className="text-center">
+                <motion.div 
+                  key={i} 
+                  className="text-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                >
                   <div className="h-14 w-14 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg mx-auto mb-4">
                     {step.num}
                   </div>
                   <h3 className="font-semibold text-slate-900 mb-2">{step.title}</h3>
                   <p className="text-slate-600 text-sm">{step.desc}</p>
-                </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-24 bg-slate-50">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">What Educators Are Saying</h2>
+              <p className="text-slate-600">Real experiences from our community</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  name: "Dr. Rajesh Kumar",
+                  role: "Senior Physics Teacher, Delhi",
+                  content: "AIPTA has transformed how I teach. The resources are comprehensive and the community support is invaluable. My students' performance has improved significantly.",
+                  rating: 5
+                },
+                {
+                  name: "Ms. Priya Sharma",
+                  role: "Physics Educator, Mumbai",
+                  content: "The peer collaboration and mentorship programs helped me develop innovative teaching methods. Highly recommended for any physics educator.",
+                  rating: 5
+                },
+                {
+                  name: "Prof. Arjun Patel",
+                  role: "Department Head, Bangalore",
+                  content: "Outstanding platform for professional development. The workshops are expertly conducted and the resource library is extensive.",
+                  rating: 5
+                }
+              ].map((testimonial, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                >
+                  <Card className="border border-slate-200 bg-white h-full hover:shadow-md transition-shadow">
+                    <CardContent className="pt-8 pb-8">
+                      <div className="flex gap-1 mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 fill-emerald-600 text-emerald-600" />
+                        ))}
+                      </div>
+                      <p className="text-slate-700 mb-4 italic">"{testimonial.content}"</p>
+                      <div className="border-t border-slate-200 pt-4">
+                        <p className="font-semibold text-slate-900">{testimonial.name}</p>
+                        <p className="text-sm text-slate-600">{testimonial.role}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
         {/* Stats Section */}
-        <section className="py-20 bg-white">
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="grid md:grid-cols-3 gap-12 text-center">
-              <div className="space-y-2">
+              <motion.div 
+                className="space-y-2"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
                 <p className="text-5xl font-bold text-emerald-600">2000+</p>
                 <p className="text-slate-600">Physics Educators Worldwide</p>
-              </div>
-              <div className="space-y-2">
+              </motion.div>
+              <motion.div 
+                className="space-y-2"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
                 <p className="text-5xl font-bold text-emerald-600">500+</p>
                 <p className="text-slate-600">Premium Teaching Resources</p>
-              </div>
-              <div className="space-y-2">
+              </motion.div>
+              <motion.div 
+                className="space-y-2"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
                 <p className="text-5xl font-bold text-emerald-600">50+</p>
                 <p className="text-slate-600">Countries Represented</p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
+        <section className="py-24 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center space-y-6">
-              <h2 className="text-4xl font-bold">Ready to Transform Your Teaching?</h2>
+              <h2 className="text-5xl font-bold">Ready to Transform Your Teaching?</h2>
               <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-                Join a community of dedicated physics educators improving education across India
+                Join a community of dedicated physics educators improving education across India. Start your journey today.
               </p>
-              <div className="flex gap-4 justify-center pt-4">
+              <div className="flex gap-4 justify-center pt-4 flex-wrap">
                 <Link href="/auth">
                   <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold">
                     Get Started Now
+                    <ArrowRight className="h-5 w-5 ml-2" />
                   </Button>
                 </Link>
               </div>
@@ -228,7 +369,7 @@ export default function LandingPage() {
                 </div>
                 <span className="font-semibold text-slate-900">AIPTA</span>
               </div>
-              <p className="text-slate-600 text-sm">Advancing physics education across India through community and collaboration</p>
+              <p className="text-slate-600 text-sm">Advancing physics education across India through community collaboration and continuous professional development</p>
             </div>
             <div>
               <h4 className="font-semibold text-slate-900 mb-4">Resources</h4>

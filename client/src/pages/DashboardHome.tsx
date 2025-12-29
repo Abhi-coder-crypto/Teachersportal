@@ -116,12 +116,7 @@ export default function DashboardHome() {
                 <CardContent className="space-y-3">
                   <p className="text-sm text-slate-700">Quick actions for managing resources:</p>
                   <div className="space-y-2">
-                    <AddResourceDialog>
-                      <Button variant="outline" className="w-full justify-start gap-2">
-                        <Upload className="h-4 w-4" />
-                        Upload New Resource
-                      </Button>
-                    </AddResourceDialog>
+                    <AddResourceDialog />
                     <Button variant="outline" className="w-full justify-start gap-2">
                       <FileText className="h-4 w-4" />
                       Review Pending Items
