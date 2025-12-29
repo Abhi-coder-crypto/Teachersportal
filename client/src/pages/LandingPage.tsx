@@ -28,9 +28,9 @@ export default function LandingPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-16 lg:py-32 bg-gradient-to-br from-blue-50 via-blue-50 to-indigo-50">
+        <section className="relative overflow-hidden py-12 lg:py-20 bg-gradient-to-br from-blue-50 via-blue-50 to-indigo-50">
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-5xl mx-auto text-center space-y-8">
+            <div className="max-w-5xl mx-auto text-center space-y-6">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ export default function LandingPage() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 }}
-                className="text-lg lg:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto"
+                className="text-base lg:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto"
               >
                 Join 2000+ physics teachers across India. Access expertly curated resources, connect with peers, and elevate your teaching methodology.
               </motion.p>
@@ -65,7 +65,7 @@ export default function LandingPage() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.15 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
+                className="flex flex-col sm:flex-row gap-4 justify-center pt-2"
               >
                 <Link href="/auth">
                   <Button size="lg" className="px-8 text-base bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
@@ -83,7 +83,7 @@ export default function LandingPage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="pt-8 flex justify-center gap-8 text-center flex-wrap"
+                className="pt-4 flex justify-center gap-8 text-center flex-wrap"
               >
                 <div>
                   <p className="font-bold text-slate-900 text-2xl">2000+</p>
@@ -319,48 +319,49 @@ export default function LandingPage() {
         </section>
       </main>
 
-      <footer className="py-12 bg-slate-900 text-slate-300 border-t">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+      <footer className="py-12 bg-gradient-to-b from-slate-900 to-slate-950 text-slate-300 border-t border-slate-800">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid md:grid-cols-4 gap-12 mb-8">
             <div>
-              <h4 className="font-semibold text-white mb-4">About</h4>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="bg-blue-600 text-white p-1.5 rounded-lg">
+                  <BookOpen className="h-4 w-4" />
+                </div>
+                <h4 className="font-semibold text-white">AIPTA</h4>
+              </div>
+              <p className="text-xs text-slate-400">Advancing physics education across India</p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-white mb-3">Resources</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition">About AIPTA</a></li>
-                <li><a href="#" className="hover:text-white transition">Our Mission</a></li>
-                <li><a href="#" className="hover:text-white transition">Leadership</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition">Study Materials</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition">Question Papers</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition">Webinars</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-white mb-4">Resources</h4>
+              <h4 className="font-semibold text-white mb-3">Community</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition">Study Materials</a></li>
-                <li><a href="#" className="hover:text-white transition">Question Papers</a></li>
-                <li><a href="#" className="hover:text-white transition">Webinars</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition">Forum</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition">Events</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition">Newsletter</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-white mb-4">Community</h4>
+              <h4 className="font-semibold text-white mb-3">Legal</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition">Forum</a></li>
-                <li><a href="#" className="hover:text-white transition">Events</a></li>
-                <li><a href="#" className="hover:text-white transition">Newsletter</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-white mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-white transition">Contact</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition">Privacy Policy</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition">Terms of Service</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition">Contact</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-slate-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
-            <p>&copy; {new Date().getFullYear()} All India Physics Teachers Association. All rights reserved.</p>
+          <div className="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center text-xs">
+            <p className="text-slate-400">&copy; {new Date().getFullYear()} All India Physics Teachers Association. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-white transition">Twitter</a>
-              <a href="#" className="hover:text-white transition">LinkedIn</a>
-              <a href="#" className="hover:text-white transition">Facebook</a>
+              <a href="#" className="text-slate-400 hover:text-white transition">Twitter</a>
+              <a href="#" className="text-slate-400 hover:text-white transition">LinkedIn</a>
+              <a href="#" className="text-slate-400 hover:text-white transition">Facebook</a>
             </div>
           </div>
         </div>
