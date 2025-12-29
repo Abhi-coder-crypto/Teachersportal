@@ -47,7 +47,7 @@ export default function LandingPage() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.05 }}
-                className="font-serif text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight"
+                className="text-4xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-tight"
               >
                 Advancing Physics Education <span className="text-blue-600">Across India</span>
               </motion.h1>
@@ -106,12 +106,12 @@ export default function LandingPage() {
 
         {/* How it Works Section */}
         <section className="py-24 bg-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 max-w-5xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-serif font-bold text-slate-900 mb-4">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-slate-900 mb-4">
                 How AIPTA Works
               </h2>
-              <p className="text-lg text-slate-600">Simple steps to get started</p>
+              <p className="text-base text-slate-600">Simple steps to get started</p>
             </div>
             
             <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
@@ -152,12 +152,12 @@ export default function LandingPage() {
 
         {/* Features Grid */}
         <section className="py-24 bg-slate-50">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 max-w-5xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-serif font-bold text-slate-900 mb-4">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-slate-900 mb-4">
                 Why Choose AIPTA
               </h2>
-              <p className="text-lg text-slate-600">Everything you need to excel</p>
+              <p className="text-base text-slate-600">Everything you need to excel</p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -166,7 +166,7 @@ export default function LandingPage() {
                   <div className="mx-auto w-16 h-16 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
                     <BookOpen className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">500+ Resources</h3>
+                  <h3 className="text-lg font-semibold text-slate-900">500+ Resources</h3>
                   <p className="text-base text-slate-600">Expert-designed study materials, past papers, and teaching guides</p>
                 </CardContent>
               </Card>
@@ -176,7 +176,7 @@ export default function LandingPage() {
                   <div className="mx-auto w-16 h-16 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center">
                     <Users2 className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">2000+ Teachers</h3>
+                  <h3 className="text-lg font-semibold text-slate-900">2000+ Teachers</h3>
                   <p className="text-base text-slate-600">Active community of educators sharing experiences and best practices</p>
                 </CardContent>
               </Card>
@@ -186,7 +186,7 @@ export default function LandingPage() {
                   <div className="mx-auto w-16 h-16 bg-green-100 text-green-600 rounded-lg flex items-center justify-center">
                     <Award className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">Expert Support</h3>
+                  <h3 className="text-lg font-semibold text-slate-900">Expert Support</h3>
                   <p className="text-base text-slate-600">Workshops, webinars, and professional development programs</p>
                 </CardContent>
               </Card>
@@ -196,7 +196,7 @@ export default function LandingPage() {
 
         {/* Stats Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 max-w-5xl">
             <div className="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto text-center">
               <div>
                 <p className="text-5xl font-bold mb-2">2000+</p>
@@ -215,11 +215,11 @@ export default function LandingPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="relative py-32 bg-gradient-to-br from-slate-900 to-slate-800 text-white overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl -mr-48 -mt-48" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl -ml-48 -mb-48" />
+        <section className="relative py-32 bg-gradient-to-br from-blue-600 to-blue-700 text-white overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-48 -mt-48" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -ml-48 -mb-48" />
           
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="container mx-auto px-4 relative z-10 max-w-5xl">
             <div className="max-w-3xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -228,10 +228,10 @@ export default function LandingPage() {
                 viewport={{ once: true }}
                 className="text-center mb-10"
               >
-                <h2 className="text-4xl lg:text-5xl font-serif font-bold mb-4 leading-tight">
+                <h2 className="text-3xl lg:text-5xl font-bold mb-4 leading-tight text-white">
                   Ready to Transform Your Physics Teaching?
                 </h2>
-                <p className="text-lg text-slate-300 leading-relaxed">
+                <p className="text-base lg:text-lg text-blue-100 leading-relaxed">
                   Join thousands of educators who are already making a difference in their students' understanding of physics.
                 </p>
               </motion.div>
@@ -259,9 +259,9 @@ export default function LandingPage() {
 
         {/* Quick Features */}
         <section className="py-24 bg-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 max-w-5xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-serif font-bold text-slate-900 mb-4">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-slate-900 mb-4">
                 Everything You Need
               </h2>
             </div>
@@ -274,7 +274,7 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-1">Download Materials</h3>
+                  <h3 className="text-base font-semibold text-slate-900 mb-1">Download Materials</h3>
                   <p className="text-slate-600">PDFs, presentations, and worksheets ready to use in class</p>
                 </div>
               </div>
@@ -286,7 +286,7 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-1">Teaching Ideas</h3>
+                  <h3 className="text-base font-semibold text-slate-900 mb-1">Teaching Ideas</h3>
                   <p className="text-slate-600">Innovative methods and strategies from experienced educators</p>
                 </div>
               </div>
@@ -298,7 +298,7 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-1">Global Network</h3>
+                  <h3 className="text-base font-semibold text-slate-900 mb-1">Global Network</h3>
                   <p className="text-slate-600">Connect with teachers from across India and around the world</p>
                 </div>
               </div>
@@ -310,7 +310,7 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-1">Goal Tracking</h3>
+                  <h3 className="text-base font-semibold text-slate-900 mb-1">Goal Tracking</h3>
                   <p className="text-slate-600">Monitor student progress and identify areas for improvement</p>
                 </div>
               </div>
@@ -323,7 +323,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h4 className="font-bold text-white mb-4">About</h4>
+              <h4 className="font-semibold text-white mb-4">About</h4>
               <ul className="space-y-2 text-sm">
                 <li><a href="#" className="hover:text-white transition">About AIPTA</a></li>
                 <li><a href="#" className="hover:text-white transition">Our Mission</a></li>
@@ -331,7 +331,7 @@ export default function LandingPage() {
               </ul>
             </div>
             <div>
-              <h4 className="font-bold text-white mb-4">Resources</h4>
+              <h4 className="font-semibold text-white mb-4">Resources</h4>
               <ul className="space-y-2 text-sm">
                 <li><a href="#" className="hover:text-white transition">Study Materials</a></li>
                 <li><a href="#" className="hover:text-white transition">Question Papers</a></li>
@@ -339,7 +339,7 @@ export default function LandingPage() {
               </ul>
             </div>
             <div>
-              <h4 className="font-bold text-white mb-4">Community</h4>
+              <h4 className="font-semibold text-white mb-4">Community</h4>
               <ul className="space-y-2 text-sm">
                 <li><a href="#" className="hover:text-white transition">Forum</a></li>
                 <li><a href="#" className="hover:text-white transition">Events</a></li>
@@ -347,7 +347,7 @@ export default function LandingPage() {
               </ul>
             </div>
             <div>
-              <h4 className="font-bold text-white mb-4">Legal</h4>
+              <h4 className="font-semibold text-white mb-4">Legal</h4>
               <ul className="space-y-2 text-sm">
                 <li><a href="#" className="hover:text-white transition">Privacy Policy</a></li>
                 <li><a href="#" className="hover:text-white transition">Terms of Service</a></li>
