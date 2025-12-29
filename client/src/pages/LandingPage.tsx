@@ -31,9 +31,9 @@ export default function LandingPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
+        <section className="relative overflow-hidden py-12 lg:py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="max-w-3xl mx-auto text-center space-y-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ export default function LandingPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="font-serif text-5xl font-extrabold tracking-tight sm:text-6xl text-slate-900 leading-tight"
+                className="font-serif text-4xl font-extrabold tracking-tight sm:text-5xl text-slate-900 leading-tight"
               >
                 Advancing Physics Education <span className="text-blue-600">Across India</span>
               </motion.h1>
@@ -59,9 +59,9 @@ export default function LandingPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto"
+                className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto"
               >
-                Join 2000+ physics teachers. Access curated resources, connect with educators worldwide, and transform your teaching. All in one secure platform.
+                Join 2000+ physics teachers. Access curated resources, connect with educators worldwide, and transform your teaching.
               </motion.p>
 
               <motion.div 
@@ -86,21 +86,21 @@ export default function LandingPage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="pt-8 flex justify-center gap-8 text-center"
+                className="pt-4 flex justify-center gap-6 text-center text-sm"
               >
                 <div>
-                  <p className="text-2xl font-bold text-slate-900">2000+</p>
-                  <p className="text-sm text-slate-600">Physics Teachers</p>
+                  <p className="text-lg font-bold text-slate-900">2000+</p>
+                  <p className="text-xs text-slate-600">Teachers</p>
                 </div>
-                <div className="h-12 w-px bg-slate-200"></div>
+                <div className="h-10 w-px bg-slate-200"></div>
                 <div>
-                  <p className="text-2xl font-bold text-slate-900">50+</p>
-                  <p className="text-sm text-slate-600">Countries</p>
+                  <p className="text-lg font-bold text-slate-900">50+</p>
+                  <p className="text-xs text-slate-600">Countries</p>
                 </div>
-                <div className="h-12 w-px bg-slate-200"></div>
+                <div className="h-10 w-px bg-slate-200"></div>
                 <div>
-                  <p className="text-2xl font-bold text-slate-900">500+</p>
-                  <p className="text-sm text-slate-600">Resources</p>
+                  <p className="text-lg font-bold text-slate-900">500+</p>
+                  <p className="text-xs text-slate-600">Resources</p>
                 </div>
               </motion.div>
             </div>
@@ -114,14 +114,14 @@ export default function LandingPage() {
         </section>
 
         {/* Features Grid */}
-        <section className="py-20 bg-white">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-serif font-bold text-slate-900 mb-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-serif font-bold text-slate-900 mb-3">
                 Everything You Need
               </h2>
-              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                Comprehensive tools and resources designed specifically for physics educators.
+              <p className="text-base text-slate-600 max-w-2xl mx-auto">
+                Comprehensive tools and resources designed for physics educators.
               </p>
             </div>
             
@@ -190,48 +190,48 @@ export default function LandingPage() {
         </section>
 
         {/* Statistics Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+        <section className="py-14 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div className="grid md:grid-cols-4 gap-6 text-center">
               <div>
-                <p className="text-5xl font-bold mb-2">2000+</p>
-                <p className="text-blue-100">Active Physics Teachers</p>
+                <p className="text-4xl font-bold mb-1">2000+</p>
+                <p className="text-sm text-blue-100">Physics Teachers</p>
               </div>
               <div>
-                <p className="text-5xl font-bold mb-2">500+</p>
-                <p className="text-blue-100">Learning Resources</p>
+                <p className="text-4xl font-bold mb-1">500+</p>
+                <p className="text-sm text-blue-100">Resources</p>
               </div>
               <div>
-                <p className="text-5xl font-bold mb-2">50+</p>
-                <p className="text-blue-100">Countries Represented</p>
+                <p className="text-4xl font-bold mb-1">50+</p>
+                <p className="text-sm text-blue-100">Countries</p>
               </div>
               <div>
-                <p className="text-5xl font-bold mb-2">5+</p>
-                <p className="text-blue-100">Years Experience</p>
+                <p className="text-4xl font-bold mb-1">5+</p>
+                <p className="text-sm text-blue-100">Years</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* About Section */}
-        <section className="py-20 bg-white">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4 max-w-4xl">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-serif font-bold text-slate-900 mb-4">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-serif font-bold text-slate-900 mb-2">
                 About AIPTA
               </h2>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <p className="text-lg text-slate-700 mb-4 leading-relaxed">
-                  The All India Physics Teachers Association (AIPTA) is a premier organization dedicated to advancing physics education across India and beyond. We represent teachers, paper setters, book authors, and senior educators passionate about transforming how physics is taught.
+                <p className="text-base text-slate-700 mb-3 leading-relaxed">
+                  The All India Physics Teachers Association (AIPTA) is a premier organization dedicated to advancing physics education across India and beyond.
                 </p>
-                <p className="text-lg text-slate-700 mb-4 leading-relaxed">
-                  Founded on the principles of excellence, collaboration, and innovation, AIPTA provides a unified platform where physics educators can access cutting-edge resources, share experiences, and grow professionally.
+                <p className="text-base text-slate-700 mb-3 leading-relaxed">
+                  AIPTA provides a unified platform where physics educators access cutting-edge resources, share experiences, and grow professionally.
                 </p>
-                <p className="text-lg text-slate-700 leading-relaxed">
-                  Our mission is simple: empower every physics teacher with the tools, knowledge, and community support they need to inspire the next generation of scientists and innovators.
+                <p className="text-base text-slate-700 leading-relaxed">
+                  Our mission: empower every physics teacher with tools and community support needed to inspire the next generation.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-12 rounded-2xl">
@@ -276,30 +276,30 @@ export default function LandingPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="relative py-24 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-900 text-white overflow-hidden">
+        <section className="relative py-16 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-900 text-white overflow-hidden">
           {/* Background decorative elements */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-48 -mt-48" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -ml-48 -mb-48" />
           
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-3xl mx-auto">
               {/* Header */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-center mb-12"
+                className="text-center mb-8"
               >
-                <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-white/30">
+                <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-semibold mb-4 border border-white/30">
                   <Zap className="h-4 w-4" />
                   Join the Physics Education Revolution
                 </div>
-                <h2 className="text-5xl font-serif font-bold mb-6 leading-tight">
+                <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 leading-tight">
                   Ready to Transform Your Teaching?
                 </h2>
-                <p className="text-xl text-blue-100 leading-relaxed">
-                  Access 500+ curated resources, connect with 2000+ educators worldwide, and elevate your teaching practice. Join thousands of physics teachers who are transforming education one classroom at a time.
+                <p className="text-base text-blue-100 leading-relaxed">
+                  Access 500+ curated resources and connect with 2000+ educators worldwide. Join thousands transforming education.
                 </p>
               </motion.div>
 
@@ -309,22 +309,22 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="grid md:grid-cols-3 gap-4 mb-12"
+                className="grid md:grid-cols-3 gap-3 mb-8"
               >
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-center">
-                  <BookOpen className="h-8 w-8 mx-auto mb-2 text-blue-200" />
-                  <p className="font-semibold text-sm">500+ Resources</p>
-                  <p className="text-xs text-blue-100 mt-1">Study materials & papers</p>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 text-center">
+                  <BookOpen className="h-6 w-6 mx-auto mb-1.5 text-blue-200" />
+                  <p className="font-semibold text-xs">500+ Resources</p>
+                  <p className="text-xs text-blue-100 mt-0.5">Materials & papers</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-center">
-                  <Users2 className="h-8 w-8 mx-auto mb-2 text-blue-200" />
-                  <p className="font-semibold text-sm">2000+ Teachers</p>
-                  <p className="text-xs text-blue-100 mt-1">From across India</p>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 text-center">
+                  <Users2 className="h-6 w-6 mx-auto mb-1.5 text-blue-200" />
+                  <p className="font-semibold text-xs">2000+ Teachers</p>
+                  <p className="text-xs text-blue-100 mt-0.5">Across India</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-center">
-                  <Globe className="h-8 w-8 mx-auto mb-2 text-blue-200" />
-                  <p className="font-semibold text-sm">50+ Countries</p>
-                  <p className="text-xs text-blue-100 mt-1">Global community</p>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 text-center">
+                  <Globe className="h-6 w-6 mx-auto mb-1.5 text-blue-200" />
+                  <p className="font-semibold text-xs">50+ Countries</p>
+                  <p className="text-xs text-blue-100 mt-0.5">Global</p>
                 </div>
               </motion.div>
 
@@ -334,15 +334,15 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="flex justify-center gap-4 flex-col sm:flex-row"
+                className="flex justify-center gap-3 flex-col sm:flex-row"
               >
                 <Link href="/auth" className="flex-1 sm:flex-none">
-                  <Button size="lg" className="w-full h-14 px-12 text-lg bg-white text-blue-700 hover:bg-slate-50 font-semibold shadow-2xl hover:shadow-xl hover:-translate-y-1 transition-all">
-                    Get Started Now
-                    <ChevronRight className="h-5 w-5 ml-2" />
+                  <Button size="lg" className="w-full h-11 px-8 text-base bg-white text-blue-700 hover:bg-slate-50 font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
+                    Get Started
+                    <ChevronRight className="h-4 w-4 ml-1" />
                   </Button>
                 </Link>
-                <Button size="lg" variant="outline" className="flex-1 sm:flex-none h-14 px-12 text-lg border-2 border-white text-white hover:bg-white/10 font-semibold">
+                <Button size="lg" variant="outline" className="flex-1 sm:flex-none h-11 px-8 text-base border-2 border-white text-white hover:bg-white/10 font-semibold">
                   Learn More
                 </Button>
               </motion.div>
@@ -353,16 +353,16 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
                 viewport={{ once: true }}
-                className="text-center mt-12 text-blue-100"
+                className="text-center mt-6 text-blue-100"
               >
-                <p className="text-sm">🔒 Secure login · 📱 Mobile friendly · 🌐 Access anywhere</p>
+                <p className="text-xs">🔒 Secure · 📱 Mobile friendly · 🌐 Anywhere</p>
               </motion.div>
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="py-12 bg-slate-50 border-t">
+      <footer className="py-8 bg-slate-50 border-t">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
