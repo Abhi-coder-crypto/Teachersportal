@@ -1,11 +1,18 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { BookOpen, ChevronRight, Users, Award, Globe, TrendingUp, Star, CheckCircle2, ArrowRight } from "lucide-react";
+import { BookOpen, ChevronRight, Users, Award, Globe, TrendingUp, Star, CheckCircle2, ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { ThreeDBackground } from "@/components/ThreeDBackground";
 
 export default function LandingPage() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col font-sans bg-white overflow-hidden">
       <ThreeDBackground />
@@ -18,7 +25,11 @@ export default function LandingPage() {
             </div>
             <span className="font-semibold text-lg text-slate-900">AIPTA</span>
           </div>
-          <nav className="flex items-center gap-4">
+          <nav className="flex items-center gap-6">
+            <button onClick={() => scrollToSection('features')} className="text-slate-600 hover:text-slate-900 transition font-medium text-sm">Features</button>
+            <button onClick={() => scrollToSection('how-it-works')} className="text-slate-600 hover:text-slate-900 transition font-medium text-sm">How It Works</button>
+            <button onClick={() => scrollToSection('testimonials')} className="text-slate-600 hover:text-slate-900 transition font-medium text-sm">Testimonials</button>
+            <button onClick={() => scrollToSection('contact')} className="text-slate-600 hover:text-slate-900 transition font-medium text-sm">Contact</button>
             <Link href="/auth">
               <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">Sign In</Button>
             </Link>
@@ -64,9 +75,11 @@ export default function LandingPage() {
                       <ChevronRight className="h-5 w-5 ml-2" />
                     </Button>
                   </Link>
-                  <Button size="lg" variant="outline" className="border-slate-300 text-slate-900 hover:bg-slate-100">
-                    Learn More
-                  </Button>
+                  <button onClick={() => scrollToSection('features')}>
+                    <Button size="lg" variant="outline" className="border-slate-300 text-slate-900 hover:bg-slate-100">
+                      Learn More
+                    </Button>
+                  </button>
                 </motion.div>
 
                 <motion.div
@@ -132,7 +145,7 @@ export default function LandingPage() {
         </section>
 
         {/* Key Features Section */}
-        <section className="py-24 bg-slate-50">
+        <section id="features" className="py-24 bg-slate-50">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-slate-900 mb-4">
@@ -218,7 +231,7 @@ export default function LandingPage() {
         </section>
 
         {/* How It Works */}
-        <section className="py-24 bg-white">
+        <section id="how-it-works" className="py-24 bg-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-slate-900 mb-4">Getting Started Is Simple</h2>
@@ -251,7 +264,7 @@ export default function LandingPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-24 bg-slate-50">
+        <section id="testimonials" className="py-24 bg-slate-50">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-slate-900 mb-4">What Educators Are Saying</h2>
@@ -337,6 +350,91 @@ export default function LandingPage() {
                 <p className="text-slate-600">Countries Represented</p>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="py-24 bg-white">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">Get in Touch</h2>
+              <p className="text-slate-600 text-lg">Have questions? We'd love to hear from you. Reach out to the AIPTA team.</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-center p-8 bg-slate-50 rounded-lg"
+              >
+                <div className="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-emerald-100 mb-4">
+                  <Mail className="h-6 w-6 text-emerald-600" />
+                </div>
+                <h3 className="font-semibold text-slate-900 mb-2">Email</h3>
+                <p className="text-slate-600 text-sm">contact@aipta.org</p>
+                <p className="text-slate-600 text-sm">support@aipta.org</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="text-center p-8 bg-slate-50 rounded-lg"
+              >
+                <div className="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-emerald-100 mb-4">
+                  <Phone className="h-6 w-6 text-emerald-600" />
+                </div>
+                <h3 className="font-semibold text-slate-900 mb-2">Phone</h3>
+                <p className="text-slate-600 text-sm">+91 (800) 123-4567</p>
+                <p className="text-slate-600 text-sm">Mon-Fri, 9AM-6PM IST</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-center p-8 bg-slate-50 rounded-lg"
+              >
+                <div className="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-emerald-100 mb-4">
+                  <MapPin className="h-6 w-6 text-emerald-600" />
+                </div>
+                <h3 className="font-semibold text-slate-900 mb-2">Location</h3>
+                <p className="text-slate-600 text-sm">New Delhi, India</p>
+                <p className="text-slate-600 text-sm">Serving educators nationwide</p>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="glass rounded-xl p-12 max-w-2xl mx-auto"
+            >
+              <form className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-slate-900 mb-2">Name</label>
+                    <input type="text" placeholder="Your name" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-slate-900 mb-2">Email</label>
+                    <input type="email" placeholder="your@email.com" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent" />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-slate-900 mb-2">Subject</label>
+                  <input type="text" placeholder="What is this about?" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-slate-900 mb-2">Message</label>
+                  <textarea placeholder="Tell us more..." rows={5} className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent resize-none"></textarea>
+                </div>
+                <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2">
+                  Send Message
+                </Button>
+              </form>
+            </motion.div>
           </div>
         </section>
 
