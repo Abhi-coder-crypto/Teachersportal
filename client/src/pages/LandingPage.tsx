@@ -31,52 +31,52 @@ export default function LandingPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-12 lg:py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
+        <section className="relative overflow-hidden py-8 lg:py-12 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-3xl mx-auto text-center space-y-6">
+            <div className="max-w-3xl mx-auto text-center space-y-3">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.3 }}
                 className="inline-block"
               >
-                <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
-                  <Zap className="h-4 w-4" />
+                <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">
+                  <Zap className="h-3 w-3" />
                   Empowering Physics Education
                 </div>
               </motion.div>
 
               <motion.h1 
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="font-serif text-4xl font-extrabold tracking-tight sm:text-5xl text-slate-900 leading-tight"
+                transition={{ duration: 0.3, delay: 0.05 }}
+                className="font-serif text-3xl font-extrabold tracking-tight sm:text-4xl text-slate-900 leading-tight"
               >
                 Advancing Physics Education <span className="text-blue-600">Across India</span>
               </motion.h1>
 
               <motion.p 
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto"
+                transition={{ duration: 0.3, delay: 0.1 }}
+                className="text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto"
               >
-                Join 2000+ physics teachers. Access curated resources, connect with educators worldwide, and transform your teaching.
+                Join 2000+ physics teachers. Access resources, connect with educators, and transform your teaching.
               </motion.p>
 
               <motion.div 
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
+                transition={{ duration: 0.3, delay: 0.15 }}
+                className="flex flex-col sm:flex-row gap-2 justify-center pt-2"
               >
                 <Link href="/auth">
-                  <Button size="lg" className="h-12 px-8 text-lg shadow-lg shadow-primary/25 hover:shadow-xl hover:-translate-y-0.5 transition-all">
-                    Get Started Now
-                    <ChevronRight className="h-4 w-4 ml-2" />
+                  <Button size="sm" className="h-10 px-6 text-sm shadow-lg shadow-primary/25 hover:shadow-xl hover:-translate-y-0.5 transition-all">
+                    Get Started
+                    <ChevronRight className="h-3 w-3 ml-1" />
                   </Button>
                 </Link>
-                <Button variant="outline" size="lg" className="h-12 px-8 text-lg">
+                <Button variant="outline" size="sm" className="h-10 px-6 text-sm">
                   Learn More
                 </Button>
               </motion.div>
@@ -85,277 +85,118 @@ export default function LandingPage() {
               <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className="pt-4 flex justify-center gap-6 text-center text-sm"
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="pt-2 flex justify-center gap-4 text-center text-xs"
               >
                 <div>
-                  <p className="text-lg font-bold text-slate-900">2000+</p>
+                  <p className="font-bold text-slate-900">2000+</p>
                   <p className="text-xs text-slate-600">Teachers</p>
                 </div>
-                <div className="h-10 w-px bg-slate-200"></div>
+                <div className="h-8 w-px bg-slate-200"></div>
                 <div>
-                  <p className="text-lg font-bold text-slate-900">50+</p>
+                  <p className="font-bold text-slate-900">50+</p>
                   <p className="text-xs text-slate-600">Countries</p>
                 </div>
-                <div className="h-10 w-px bg-slate-200"></div>
+                <div className="h-8 w-px bg-slate-200"></div>
                 <div>
-                  <p className="text-lg font-bold text-slate-900">500+</p>
+                  <p className="font-bold text-slate-900">500+</p>
                   <p className="text-xs text-slate-600">Resources</p>
                 </div>
               </motion.div>
             </div>
           </div>
           
-          {/* Abstract background elements */}
+          {/* Abstract background elements - smaller */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-0 pointer-events-none">
-            <div className="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] rounded-full bg-blue-100/50 blur-3xl" />
-            <div className="absolute top-[40%] -left-[10%] w-[500px] h-[500px] rounded-full bg-indigo-100/50 blur-3xl" />
+            <div className="absolute -top-[30%] -right-[20%] w-[400px] h-[400px] rounded-full bg-blue-100/40 blur-3xl" />
+            <div className="absolute top-[50%] -left-[15%] w-[300px] h-[300px] rounded-full bg-indigo-100/40 blur-3xl" />
           </div>
         </section>
 
-        {/* Features Grid */}
-        <section className="py-16 bg-white">
+        {/* Features Grid - Only 3 items */}
+        <section className="py-10 bg-white">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-serif font-bold text-slate-900 mb-3">
-                Everything You Need
-              </h2>
-              <p className="text-base text-slate-600 max-w-2xl mx-auto">
-                Comprehensive tools and resources designed for physics educators.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="border shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="pt-8 text-center space-y-4">
-                  <div className="mx-auto w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center">
-                    <BookOpen className="h-7 w-7" />
-                  </div>
-                  <h3 className="text-xl font-bold font-serif">Curated Resources</h3>
-                  <p className="text-slate-600">Access 500+ expertly designed study materials, solved papers, and teaching guides for all ICSE classes.</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="pt-8 text-center space-y-4">
-                  <div className="mx-auto w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center">
-                    <Users2 className="h-7 w-7" />
-                  </div>
-                  <h3 className="text-xl font-bold font-serif">Global Community</h3>
-                  <p className="text-slate-600">Connect with 2000+ physics educators from India and 50+ countries. Share insights and best practices.</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="pt-8 text-center space-y-4">
-                  <div className="mx-auto w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center">
-                    <Award className="h-7 w-7" />
-                  </div>
-                  <h3 className="text-xl font-bold font-serif">Professional Growth</h3>
-                  <p className="text-slate-600">Access workshops, seminars, and training programs from industry experts and seasoned educators.</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="pt-8 text-center space-y-4">
-                  <div className="mx-auto w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center">
-                    <Globe className="h-7 w-7" />
-                  </div>
-                  <h3 className="text-xl font-bold font-serif">Secure Access</h3>
-                  <p className="text-slate-600">Enterprise-grade security ensures your content is protected. Access from anywhere, anytime.</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="pt-8 text-center space-y-4">
-                  <div className="mx-auto w-14 h-14 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center">
-                    <BarChart3 className="h-7 w-7" />
-                  </div>
-                  <h3 className="text-xl font-bold font-serif">Yearly Updates</h3>
-                  <p className="text-slate-600">Resources updated annually with latest curriculum changes and exam patterns.</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="pt-8 text-center space-y-4">
-                  <div className="mx-auto w-14 h-14 bg-cyan-100 text-cyan-600 rounded-xl flex items-center justify-center">
-                    <Zap className="h-7 w-7" />
-                  </div>
-                  <h3 className="text-xl font-bold font-serif">Quick Access</h3>
-                  <p className="text-slate-600">Intuitive dashboard makes finding resources easy. Filter by year, class, and topic instantly.</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Statistics Section */}
-        <section className="py-14 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-4 gap-6 text-center">
-              <div>
-                <p className="text-4xl font-bold mb-1">2000+</p>
-                <p className="text-sm text-blue-100">Physics Teachers</p>
-              </div>
-              <div>
-                <p className="text-4xl font-bold mb-1">500+</p>
-                <p className="text-sm text-blue-100">Resources</p>
-              </div>
-              <div>
-                <p className="text-4xl font-bold mb-1">50+</p>
-                <p className="text-sm text-blue-100">Countries</p>
-              </div>
-              <div>
-                <p className="text-4xl font-bold mb-1">5+</p>
-                <p className="text-sm text-blue-100">Years</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* About Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl font-serif font-bold text-slate-900 mb-2">
-                About AIPTA
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-serif font-bold text-slate-900 mb-2">
+                Why Choose AIPTA
               </h2>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <p className="text-base text-slate-700 mb-3 leading-relaxed">
-                  The All India Physics Teachers Association (AIPTA) is a premier organization dedicated to advancing physics education across India and beyond.
-                </p>
-                <p className="text-base text-slate-700 mb-3 leading-relaxed">
-                  AIPTA provides a unified platform where physics educators access cutting-edge resources, share experiences, and grow professionally.
-                </p>
-                <p className="text-base text-slate-700 leading-relaxed">
-                  Our mission: empower every physics teacher with tools and community support needed to inspire the next generation.
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-12 rounded-2xl">
-                <div className="space-y-6">
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 text-white">
-                        <BookOpen className="h-6 w-6" />
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-slate-900">ICSE Focused</h4>
-                      <p className="text-slate-600 text-sm">All resources aligned with ICSE curriculum standards</p>
-                    </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="border shadow-sm hover:shadow-md transition-all duration-300">
+                <CardContent className="pt-6 text-center space-y-2">
+                  <div className="mx-auto w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
+                    <BookOpen className="h-6 w-6" />
                   </div>
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 text-white">
-                        <Users className="h-6 w-6" />
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-slate-900">Expert Community</h4>
-                      <p className="text-slate-600 text-sm">Resources created by experienced educators and authors</p>
-                    </div>
+                  <h3 className="text-base font-bold font-serif">500+ Resources</h3>
+                  <p className="text-xs text-slate-600">Expert-designed materials & papers</p>
+                </CardContent>
+              </Card>
+
+              <Card className="border shadow-sm hover:shadow-md transition-all duration-300">
+                <CardContent className="pt-6 text-center space-y-2">
+                  <div className="mx-auto w-12 h-12 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center">
+                    <Users2 className="h-6 w-6" />
                   </div>
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 text-white">
-                        <Award className="h-6 w-6" />
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-slate-900">Trusted Platform</h4>
-                      <p className="text-slate-600 text-sm">Secure and reliable access for all members</p>
-                    </div>
+                  <h3 className="text-base font-bold font-serif">2000+ Teachers</h3>
+                  <p className="text-xs text-slate-600">Global community & networking</p>
+                </CardContent>
+              </Card>
+
+              <Card className="border shadow-sm hover:shadow-md transition-all duration-300">
+                <CardContent className="pt-6 text-center space-y-2">
+                  <div className="mx-auto w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center">
+                    <Award className="h-6 w-6" />
                   </div>
-                </div>
-              </div>
+                  <h3 className="text-base font-bold font-serif">Expert Support</h3>
+                  <p className="text-xs text-slate-600">Workshops & professional growth</p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="relative py-16 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-900 text-white overflow-hidden">
-          {/* Background decorative elements */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-48 -mt-48" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -ml-48 -mb-48" />
+        <section className="relative py-10 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-900 text-white overflow-hidden">
+          {/* Background decorative elements - smaller */}
+          <div className="absolute top-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl -mr-36 -mt-36" />
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/10 rounded-full blur-3xl -ml-36 -mb-36" />
           
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-2xl mx-auto">
               {/* Header */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.3 }}
                 viewport={{ once: true }}
-                className="text-center mb-8"
+                className="text-center mb-6"
               >
-                <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-semibold mb-4 border border-white/30">
-                  <Zap className="h-4 w-4" />
-                  Join the Physics Education Revolution
-                </div>
-                <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 leading-tight">
-                  Ready to Transform Your Teaching?
+                <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-2 leading-tight">
+                  Ready to Join?
                 </h2>
-                <p className="text-base text-blue-100 leading-relaxed">
-                  Access 500+ curated resources and connect with 2000+ educators worldwide. Join thousands transforming education.
+                <p className="text-sm text-blue-100 leading-relaxed">
+                  Access resources and connect with physics educators worldwide.
                 </p>
-              </motion.div>
-
-              {/* Features Grid */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="grid md:grid-cols-3 gap-3 mb-8"
-              >
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 text-center">
-                  <BookOpen className="h-6 w-6 mx-auto mb-1.5 text-blue-200" />
-                  <p className="font-semibold text-xs">500+ Resources</p>
-                  <p className="text-xs text-blue-100 mt-0.5">Materials & papers</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 text-center">
-                  <Users2 className="h-6 w-6 mx-auto mb-1.5 text-blue-200" />
-                  <p className="font-semibold text-xs">2000+ Teachers</p>
-                  <p className="text-xs text-blue-100 mt-0.5">Across India</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 text-center">
-                  <Globe className="h-6 w-6 mx-auto mb-1.5 text-blue-200" />
-                  <p className="font-semibold text-xs">50+ Countries</p>
-                  <p className="text-xs text-blue-100 mt-0.5">Global</p>
-                </div>
               </motion.div>
 
               {/* CTA Button */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+                transition={{ duration: 0.3, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="flex justify-center gap-3 flex-col sm:flex-row"
+                className="flex justify-center gap-2 flex-col sm:flex-row"
               >
                 <Link href="/auth" className="flex-1 sm:flex-none">
-                  <Button size="lg" className="w-full h-11 px-8 text-base bg-white text-blue-700 hover:bg-slate-50 font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
+                  <Button size="sm" className="w-full h-10 px-6 text-sm bg-white text-blue-700 hover:bg-slate-50 font-semibold shadow-lg hover:shadow-xl transition-all">
                     Get Started
-                    <ChevronRight className="h-4 w-4 ml-1" />
+                    <ChevronRight className="h-3 w-3 ml-1" />
                   </Button>
                 </Link>
-                <Button size="lg" variant="outline" className="flex-1 sm:flex-none h-11 px-8 text-base border-2 border-white text-white hover:bg-white/10 font-semibold">
+                <Button size="sm" variant="outline" className="flex-1 sm:flex-none h-10 px-6 text-sm border-2 border-white text-white hover:bg-white/10 font-semibold">
                   Learn More
                 </Button>
-              </motion.div>
-
-              {/* Trust Badge */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                viewport={{ once: true }}
-                className="text-center mt-6 text-blue-100"
-              >
-                <p className="text-xs">🔒 Secure · 📱 Mobile friendly · 🌐 Anywhere</p>
               </motion.div>
             </div>
           </div>
