@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { BookOpen, Users, Award, ChevronRight, Zap, Globe, Users2, BarChart3 } from "lucide-react";
+import { BookOpen, Users, Award, ChevronRight, Zap, Globe, Users2, BarChart3, Lock, Smartphone } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function LandingPage() {
@@ -276,18 +276,88 @@ export default function LandingPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-slate-900 text-white">
-          <div className="container mx-auto px-4 text-center max-w-3xl">
-            <h2 className="text-4xl font-serif font-bold mb-6">Ready to Join the Community?</h2>
-            <p className="text-xl text-slate-300 leading-relaxed mb-8">
-              Access 500+ curated resources, connect with educators worldwide, and elevate your teaching practice. Join thousands of physics teachers who are transforming education.
-            </p>
-            <Link href="/auth">
-              <Button size="lg" className="h-12 px-8 text-lg bg-white text-slate-900 hover:bg-slate-100">
-                Login or Register Now
-                <ChevronRight className="h-4 w-4 ml-2" />
-              </Button>
-            </Link>
+        <section className="relative py-24 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-900 text-white overflow-hidden">
+          {/* Background decorative elements */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-48 -mt-48" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -ml-48 -mb-48" />
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto">
+              {/* Header */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center mb-12"
+              >
+                <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-white/30">
+                  <Zap className="h-4 w-4" />
+                  Join the Physics Education Revolution
+                </div>
+                <h2 className="text-5xl font-serif font-bold mb-6 leading-tight">
+                  Ready to Transform Your Teaching?
+                </h2>
+                <p className="text-xl text-blue-100 leading-relaxed">
+                  Access 500+ curated resources, connect with 2000+ educators worldwide, and elevate your teaching practice. Join thousands of physics teachers who are transforming education one classroom at a time.
+                </p>
+              </motion.div>
+
+              {/* Features Grid */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="grid md:grid-cols-3 gap-4 mb-12"
+              >
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-center">
+                  <BookOpen className="h-8 w-8 mx-auto mb-2 text-blue-200" />
+                  <p className="font-semibold text-sm">500+ Resources</p>
+                  <p className="text-xs text-blue-100 mt-1">Study materials & papers</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-center">
+                  <Users2 className="h-8 w-8 mx-auto mb-2 text-blue-200" />
+                  <p className="font-semibold text-sm">2000+ Teachers</p>
+                  <p className="text-xs text-blue-100 mt-1">From across India</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-center">
+                  <Globe className="h-8 w-8 mx-auto mb-2 text-blue-200" />
+                  <p className="font-semibold text-sm">50+ Countries</p>
+                  <p className="text-xs text-blue-100 mt-1">Global community</p>
+                </div>
+              </motion.div>
+
+              {/* CTA Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="flex justify-center gap-4 flex-col sm:flex-row"
+              >
+                <Link href="/auth" className="flex-1 sm:flex-none">
+                  <Button size="lg" className="w-full h-14 px-12 text-lg bg-white text-blue-700 hover:bg-slate-50 font-semibold shadow-2xl hover:shadow-xl hover:-translate-y-1 transition-all">
+                    Get Started Now
+                    <ChevronRight className="h-5 w-5 ml-2" />
+                  </Button>
+                </Link>
+                <Button size="lg" variant="outline" className="flex-1 sm:flex-none h-14 px-12 text-lg border-2 border-white text-white hover:bg-white/10 font-semibold">
+                  Learn More
+                </Button>
+              </motion.div>
+
+              {/* Trust Badge */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center mt-12 text-blue-100"
+              >
+                <p className="text-sm">🔒 Secure login · 📱 Mobile friendly · 🌐 Access anywhere</p>
+              </motion.div>
+            </div>
           </div>
         </section>
       </main>
