@@ -9,8 +9,11 @@ import { Loader2 } from "lucide-react";
 import NotFound from "@/pages/not-found";
 import LandingPage from "@/pages/LandingPage";
 import AuthPage from "@/pages/AuthPage";
+import ForgotPassword from "@/pages/ForgotPassword";
 import DashboardHome from "@/pages/DashboardHome";
 import ResourceList from "@/pages/ResourceList";
+import AuthorResources from "@/pages/AuthorResources";
+import Profile from "@/pages/Profile";
 
 function ProtectedRoute({ component: Component, ...rest }: any) {
   const { user, isLoading } = useAuth();
@@ -35,6 +38,7 @@ function Router() {
     <Switch>
       <Route path="/" component={LandingPage} />
       <Route path="/auth" component={AuthPage} />
+      <Route path="/forgot-password" component={ForgotPassword} />
       
       {/* Protected Dashboard Routes */}
       <Route path="/dashboard">
@@ -75,6 +79,14 @@ function Router() {
             />
           )} 
         />
+      </Route>
+
+      <Route path="/dashboard/author-resources">
+        <ProtectedRoute component={AuthorResources} />
+      </Route>
+
+      <Route path="/dashboard/profile">
+        <ProtectedRoute component={Profile} />
       </Route>
 
       <Route component={NotFound} />

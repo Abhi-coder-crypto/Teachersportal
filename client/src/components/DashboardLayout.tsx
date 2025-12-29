@@ -27,6 +27,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     { href: "/dashboard/study-material", label: "Study Materials", icon: BookOpen },
     { href: "/dashboard/question-papers", label: "Question Papers", icon: FileText },
     { href: "/dashboard/videos", label: "Video Lectures", icon: Video },
+    { href: "/dashboard/author-resources", label: "Author Resources", icon: BookOpen },
+    { href: "/dashboard/profile", label: "Profile", icon: User },
   ];
 
   const Sidebar = ({ className }: { className?: string }) => (

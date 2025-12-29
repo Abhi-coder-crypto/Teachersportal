@@ -102,9 +102,11 @@ export default function AuthPage() {
                 />
 
                 <div className="flex justify-end">
-                  <Button variant="link" size="sm" className="px-0 font-normal text-muted-foreground" type="button">
-                    Forgot password?
-                  </Button>
+                  <Link href="/forgot-password">
+                    <Button variant="link" size="sm" className="px-0 font-normal text-muted-foreground" type="button">
+                      Forgot password?
+                    </Button>
+                  </Link>
                 </div>
 
                 <Button type="submit" className="w-full h-11 text-base font-medium" disabled={isLoggingIn}>
