@@ -3,10 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { BookOpen, ChevronRight, Users, Award, Globe, TrendingUp, Star, CheckCircle2, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { ThreeDBackground } from "@/components/ThreeDBackground";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-white">
+    <div className="min-h-screen flex flex-col font-sans bg-white overflow-hidden">
+      <ThreeDBackground />
       {/* Navbar */}
       <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between max-w-6xl">
@@ -26,7 +28,7 @@ export default function LandingPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-24 bg-gradient-to-br from-slate-50 via-white to-emerald-50">
+        <section className="relative overflow-hidden py-24 bg-gradient-to-br from-slate-50 via-white to-emerald-50 z-10">
           <div className="container mx-auto px-4 max-w-6xl relative z-10">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
@@ -36,7 +38,7 @@ export default function LandingPage() {
                   transition={{ duration: 0.5 }}
                 >
                   <p className="text-emerald-700 font-medium text-sm uppercase tracking-wide">Educator Network</p>
-                  <h1 className="text-5xl lg:text-6xl font-bold leading-tight mt-4 text-slate-900">
+                  <h1 className="text-5xl lg:text-6xl font-bold leading-tight mt-4 bg-gradient-to-r from-slate-900 via-emerald-700 to-emerald-600 bg-clip-text text-transparent">
                     Transform Physics Education Across India
                   </h1>
                 </motion.div>
@@ -90,7 +92,7 @@ export default function LandingPage() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="bg-white border border-slate-200 rounded-lg p-8 shadow-sm"
+                className="glass rounded-xl p-8 border-emerald-200/50 card-hover"
               >
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
