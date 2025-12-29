@@ -439,11 +439,11 @@ export default function LandingPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
+        <section className="py-24 bg-gradient-to-r from-emerald-600 to-emerald-500 text-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center space-y-6">
-              <h2 className="text-5xl font-bold">Ready to Transform Your Teaching?</h2>
-              <p className="text-slate-300 text-lg max-w-2xl mx-auto">
+              <h2 className="text-5xl font-bold text-white">Ready to Transform Your Teaching?</h2>
+              <p className="text-white text-lg max-w-2xl mx-auto opacity-95">
                 Join a community of dedicated physics educators improving education across India. Start your journey today.
               </p>
               <div className="flex gap-4 justify-center pt-4 flex-wrap">
