@@ -16,19 +16,21 @@ export function ThreeDBackground() {
     renderer.setClearColor(0xffffff, 0);
     containerRef.current.appendChild(renderer.domElement);
 
-    camera.position.z = 5;
+    camera.position.z = 8;
 
-    // Create floating spheres with gradient material
+    // Create floating spheres with bright, translucent material
     const spheres: THREE.Mesh[] = [];
-    const colors = [0x10b981, 0x064e3b, 0x6ee7b7];
+    const colors = [0x10b981, 0x6ee7b7, 0xd1fae5];
     
-    for (let i = 0; i < 5; i++) {
-      const geometry = new THREE.SphereGeometry(Math.random() * 0.5 + 0.3, 32, 32);
+    for (let i = 0; i < 3; i++) {
+      const geometry = new THREE.SphereGeometry(Math.random() * 0.8 + 0.5, 32, 32);
       const material = new THREE.MeshPhongMaterial({
         color: colors[i % colors.length],
         emissive: colors[i % colors.length],
-        emissiveIntensity: 0.3,
+        emissiveIntensity: 0.5,
         wireframe: false,
+        transparent: true,
+        opacity: 0.15,
       });
       
       const sphere = new THREE.Mesh(geometry, material);
@@ -45,12 +47,16 @@ export function ThreeDBackground() {
     }
 
     // Lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
     scene.add(ambientLight);
     
-    const pointLight = new THREE.PointLight(0x10b981, 1);
+    const pointLight = new THREE.PointLight(0x10b981, 0.5);
     pointLight.position.set(5, 5, 5);
     scene.add(pointLight);
+
+    const pointLight2 = new THREE.PointLight(0x6ee7b7, 0.3);
+    pointLight2.position.set(-5, -5, 5);
+    scene.add(pointLight2);
 
     // Animation loop
     const animate = () => {
