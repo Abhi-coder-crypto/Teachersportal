@@ -2,7 +2,7 @@ import { DashboardLayout } from "@/components/DashboardLayout";
 import { useAuth } from "@/hooks/use-auth";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BookOpen, FileText, Video, ArrowRight, UserCheck, Upload, Bell, Settings, BarChart3 } from "lucide-react";
+import { BookOpen, FileText, Video, ArrowRight, UserCheck, Upload, Bell, Settings, BarChart3, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AddResourceDialog } from "@/components/AddResourceDialog";
